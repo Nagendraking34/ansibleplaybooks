@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: install git
+      apt:
+         name: git
+         state: present
+         update_cache: yes
+    - name: clone a remote git repo
+      git:
+         repo: https://github.com/Nagendraking34/dockerfiles.git
+         dest: /home/ubuntu/newgit
+
+

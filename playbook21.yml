@@ -1,0 +1,11 @@
+---
+- name: debug method
+  hosts: all
+  tasks:
+    - name: kernel
+      debug: msg="{{ansible_kernel}}"
+    - name: host name
+      debug: msg="{{ansible_hostname}}"
+    - debug: var=ansible_distribution
+    - debug: var=hostvars
+

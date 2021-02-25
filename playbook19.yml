@@ -1,0 +1,12 @@
+---
+- name: create a dir
+  hosts: all
+  tasks:
+    - name: create dir
+      file: 
+         name: /tmp/dir1
+         state: directory
+      register: a
+    - name: displaying output of the above module
+      debug:
+        var: a  

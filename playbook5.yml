@@ -1,0 +1,12 @@
+---
+- name: installing software applications
+#global scope variables is defined from command prompt & it has the height priority
+  hosts: all
+  become: yes
+  tasks:
+    - name: install software
+      apt:
+              name: "{{a}}"
+              state: "{{b}}"
+              update_cache: "{{c}}"
+             

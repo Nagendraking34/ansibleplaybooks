@@ -1,0 +1,11 @@
+---
+- hosts: all
+  tasks:
+    - name: create a file
+      file:
+        name: chandra
+        state: touch
+    - copy:
+        src: /etc/ansible
+        dest: /home/ubuntu
+

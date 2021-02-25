@@ -1,0 +1,14 @@
+---
+- name: Insatlling packages
+  hosts: all
+  tasks:
+   - name: installing softwares
+     apt:
+       name: "{{item}}"
+       state: absent
+       update_cache: yes
+     with_items:
+      - tree
+      - apache2
+      - firewalld
+...

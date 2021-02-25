@@ -1,0 +1,9 @@
+---
+- name: implementing hostscope variables
+  hosts: webserver
+  tasks:
+    - name: install firewalld
+      apt:
+         name: "{{a}}"
+         state: "{{b}}"
+         update: "{{c}}"
